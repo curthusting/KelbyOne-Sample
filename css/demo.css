@@ -1,0 +1,420 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+html,
+body {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+
+    color: #838383;
+    background: #fefefe;
+}
+
+a {
+    text-decoration: none;
+
+    color: #ffa400;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    padding: 0 1rem;
+    margin: 1rem 0;
+
+    line-height: 1.4;
+}
+
+::-webkit-input-placeholder {
+    text-transform: uppercase;
+}
+::-moz-placeholder {
+    text-transform: uppercase;
+}
+:-ms-input-placeholder {
+    text-transform: uppercase;
+}
+:-moz-placeholder {
+    text-transform: uppercase;
+}
+::placeholder {
+    text-transform: uppercase;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+label,
+input {
+    float: left;
+    width: 100%;
+    padding: 4px 0;
+    margin: 0;
+    clear: both;
+}
+
+label {
+    font-size: .8rem;
+}
+
+input {
+    margin-bottom: 8px;
+
+    font-size: .9rem;
+
+    border: 0 solid #838383;
+    outline: none;
+}
+
+input[type="submit"] {
+    padding: 8px 0;
+
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+input:not([type="submit"]) {
+    border-bottom-width: 1px;
+}
+
+input:focus:not([type="submit"]) {
+    border-color: #4caf50;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+h1 {
+    width: 100%;
+    padding: 1rem;
+    margin: 0;
+
+    font-size: 1.5rem;
+
+    color: #262a2d;
+}
+h2 {
+    width: 100%;
+    padding: 1rem;
+    margin: 0;
+
+    font-size: 1.25rem;
+
+    color: #262a2d;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99999;
+
+    display: none;
+
+    background: #fefefe;
+}
+
+.show-overlay .overlay {
+    display: flex;
+}
+
+.overlay form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 250px;
+    height: 150px;
+    padding: 25px;
+    margin-top: -75px;
+    margin-left: -125px;
+}
+
+#course {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+
+    width: 50vw;
+    padding-bottom: 40px;
+    overflow: hidden;
+    overflow-y: auto;
+
+    transition-duration: 600ms;
+    transform: translateX(50vw);
+
+    background: #fff;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+#course .details {
+    max-width: 800px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.lessons {
+    margin-top: 0;
+}
+
+.show-course #course {
+    transform: translateX(0);
+
+    box-shadow: -8px 0 16px rgba(131,131,131,.3);
+}
+
+#course .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+
+    padding: 10px;
+    margin: 10px;
+
+    cursor: pointer;
+
+    color: #e51c23;
+    background: rgba(250,250,250,.8);
+}
+
+.show-overlay,
+.show-course {
+    overflow: hidden;
+}
+
+#error {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 99999;
+
+    text-align: center;
+
+    color: #e51c23;
+}
+
+#category-classes h3 {
+    font-size: 1.125rem;
+
+    color: #262a2d;
+}
+.container {
+    position: relative;
+
+    float: left;
+}
+
+
+#category-classes h2 {
+    position: fixed;
+    z-index: 1;
+
+    background: #fefefe;
+}
+
+#category-classes .results {
+    margin-top: 50px;
+}
+
+.results {
+    position: relative;
+
+    float: left;
+    width: 100%;
+    min-height: 50px;
+}
+
+#categories {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 280px;
+    overflow: hidden;
+    overflow-y: auto;
+
+    background: #f4f7f9;
+
+    -webkit-overflow-scroll: touch;
+}
+
+#category-classes {
+    float: left;
+    width: calc(100% - 280px);
+    padding: 0 0 40px;
+    margin-left: 280px;
+}
+
+#category-classes .results {
+    display: flex;
+
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#categories li {
+    padding-right: 0;
+    padding-left: calc(1rem - 4px);
+
+    border-left: 4px solid #f4f7f9;
+}
+
+#categories li:hover {
+    border-left: 4px solid #fefefe;
+    background: #fefefe;
+}
+#categories li.active {
+    border-left: 4px solid #ffa400;
+    background: #fefefe;
+    box-shadow: -8px 0 16px rgba(131,131,131,.3);
+}
+
+#category-classes li {
+    width: 100%;
+    max-width: 400px;
+    min-width: 200px;
+}
+
+li {
+    position: relative;
+
+    float: left;
+    width: 100%;
+    padding: 1rem 0;
+    margin: 0;
+
+    list-style: none;
+}
+
+#course .instructors {
+    padding: 0 1rem;
+
+    border-top: 2px solid  #ffa400;
+}
+#course .instructor .bio h2 {
+    padding: 0 1rem;
+}
+
+#course h3 {
+    margin: 1em 0;
+
+    font-size: 1.125rem;
+}
+
+#course .headshot {
+    float: left;
+    width: 25%;
+}
+#course .bio {
+    float: left;
+    width: 75%;
+}
+
+.template,
+.hide {
+    display: none;
+}
+.loading::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    padding: 1em;
+
+    content: "Loading...";
+    text-align: center;
+
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.toggle {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
+
+    display: none;
+    width: 35px;
+    height: 35px;
+
+    cursor: pointer;
+
+    background: #ffa400;
+}
+
+.toggle .icon {
+    position: relative;
+
+    display: inline-block;
+    width: 20px;
+    height: 2px;
+    margin: 16px 7px;
+
+    font-style: normal;
+
+    text-align: left;
+    vertical-align: middle;
+    text-indent: -9999px;
+
+    color: #fefefe;
+    box-shadow: inset 0 0 0 32px, 0 -6px, 0 6px;
+
+    direction: ltr;
+}
+
+@media screen and (max-width: 700px) {
+    #categories {
+        z-index: 10;
+
+        transition-duration: 600ms;
+        transform: translateX(-300px);
+    }
+    .toggle {
+        display: block;
+    }
+    #category-classes {
+        width: 100%;
+        margin-left: 0;
+    }
+    #categories h2 {
+        padding-left: 70px;
+    }
+    #category-classes h2 {
+        padding-left: 50px;
+    }
+    .show-categories #categories {
+        transform: translateX(0);
+
+        box-shadow: 8px 0 16px rgba(131,131,131,.3);
+    }
+    #course {
+        width: 100vw;
+
+        transform: translateX(100vw);
+    }
+}

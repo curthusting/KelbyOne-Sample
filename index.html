@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://u5l0g2luan7323c4w1lhl6l2-wpengine.netdna-ssl.com/wp-content/themes/ko/assets/images/favicon/favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700,400italic' rel='stylesheet' type='text/css'>
+
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"> -->
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/demo.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/detectizr/2.2.0/detectizr.min.js"></script>
+    <title>KelbyOne Demo</title>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <span class="toggle"><i class="icon"></i></span>
+        <div id="categories" class="container">
+            <h2>Categories</h2>
+            <ul class="results">
+                <li class="item template">
+                    <a href="#">
+                        <h3 class="name"></h3>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="category-classes" class="container">
+            <h2>Courses | <a href="#" id="sort">Sort A-Z</a></h2>
+            <ul class="results">
+                <li class="item template">
+                    <a href="#">
+                        <img class="thumb" src="">
+                    </a>
+                    <div class="details">
+                        <a href="#"><h3 class="name"></h3></a>
+                        <!-- <p class="description"></p> -->
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="course">
+            <img class="primary" src="">
+            <span class="close">CLOSE</span>
+            <div class="details">
+                <div class="info">
+                    <h1 class="name"></h1>
+                    <p class="lessons"><span class="count"></span> lessons</p>
+                    <p class="description"></p>
+                </div>
+                <div class="instructors">
+                    <h3>Instructor Information</h3>
+                    <div class="instructor template">
+                        <div class="headshot">
+                            <img src="">
+                        </div>
+                        <div class="bio">
+                            <h2 class="name"></h2>
+                            <p class="description"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+    <div class="overlay">
+        <form id="login" method="post" action="http://kelbynew.staging.wpengine.com/api/v1/login">
+            <label for="username">Username</label>
+            <input name="username" type="text" value="FETest" placeholder="username" autocomplete="off">
+            <label for="password">Password</label>
+            <input name="password" type="passowrd" value="FETest!@#" placeholder="password" autocomplete="off">
+            <input type="submit" value="Submit" role="button">
+        </form>
+    </div>
+    <p id="error"></p>
+</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="js/demo.js"></script>
+</html>
